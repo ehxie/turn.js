@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.2 (2023-07-19)
+
+
+### Features
+
+* support side flip ([#1](https://github.com/ehxie/turn.js/issues/1)) ([21400ce](https://github.com/ehxie/turn.js/commit/21400cef0a6e45701e0df267dc4b6bee4a8b84ed))
+* support vue2 ([33bc3af](https://github.com/ehxie/turn.js/commit/33bc3afda0dc750760aa7c121fce8f642e0b5b0b))
+
 ### [0.0.1](https://github.com/ehxie/turn.js/compare/turnjs-vue_v0.0.1-2...turnjs-vue_v0.0.1) (2023-07-19)
 
 ### 0.0.1-2 (2023-07-19)
