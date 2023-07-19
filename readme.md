@@ -1,123 +1,72 @@
+# turn-vue
 
-![Bilby Stampede](http://turnjs.com/pics/small-turnjs-letters.png)
+该仓库是在 [turn.js](https://github.com/blasten/turn.js) 的基础上做了改动
 
-**Get the turn.js 4th release on [turnjs.com](http://www.turnjs.com/)**
+1. 翻页可以支持整个侧边，而不仅仅只能从四个角进行翻页
+2. 支持 vue2
 
+[更详细的使用](/readme-old.md)
 
-### What's new in turn.js 4th release?
+# Usage
 
-- Added option `autoCenter`
+1.安装
 
-- Added option `zoom`
+```shell
+npm install turnjs-vue
+```
 
-- Added property `animating`
+2.局部导入
 
-- Added property `zoom`
+```vue
+<template>
+    <Flip>
+        <div class="flip-item-demo">1</div>
+        <div class="flip-item-demo">2</div>
+        <div class="flip-item-demo">3</div>
+    </Flip>
+<template>
+<script>
+import Flip from "turnjs-vue";
 
-- Added method `center`
-
-- Added method `destroy`
-
-- Added method `is`
-
-- Added method `zoom`
-
-- Added event `missing`
-
-- Added event `zooming`
-
-- Added class `.even`
-
-- Added class `.fixed`
-
-- Added class `.hard`
-
-- Added class `.odd`
-
-- Added class `.own-size`
-
-- Added class `.sheet`
-
-- Added the ignore attribute
-
-- New turn.html4.js
-
-- New scissors.js
-
-- Changed the class `.turn-page` to `.page`
-
-- Improved the animation frame generator with requestAnimationFrame
-
-- Improved the animation speed for hard pages with CSS3 transitions
-
-- Redesigned the event sequence to listen to only three events
-
-- Fixed issue #79
-
-- Fixed issue #91
-
-- Fixed issue about the event order turning + turned
-
-- Fixed issue about appending pages in wrong locations
-
-Available only on [turnjs.com](http://www.turnjs.com/)
-
-* * *
-
-turn.js 3rd release
-=========
-
-### Make a flip book with HTML5
-
-Turn.js is a plugin for jQuery that adds a beautiful transition similar to real pages in a book or magazine. It works in all modern browsers including touch devices.
-
-### What's new?
-
-- New `addPage` for creating pages dynamically.
-
-- New `display` for single and double pages.
-
-- Gradients for non-webkit browsers.
-
-#### Usage
-
-**CSS code:**
-```css
-#magazine{
-	width: 800px;
-	height: 400px;
+export default {
+    components: {
+        Flip
+    }
 }
-#magazine .turn-page{
-	background-color:#ccc;
+</script>
+<style>
+.flip-item-demo {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+</style>
+```
+
+## Props
+options: 参考 [turn.js 的 Options](http://www.turnjs.com/#api)
+disable: Boolean, 是否禁用滑动（可以自己调用 nextPage 进行翻页）
+wrapperClass: 自定义 wrapper 的 class
+## API
+```shell
+# example
+import {nextPage} from 'turnjs-vue'
+````
+
+```ts
+// 功能：下一页
+// 当最后一页调用该函数时返回 false
+interface nextPage {
+    (): boolean 
+}
+
+// 功能：上一页
+// 当第一页调用该函数时返回 false
+interface previousPage {
+    (): boolean 
+}
+
+// interface toPage {
+    (index: number): void
 }
 ```
-
-**HTML code:**
-```html
-<div id="magazine">
-	<div><span class="text">Page 1</span></div>
-	<div><span class="text">Page 2</span></div>
-	<div><span class="text">Page 3</span></div>
-</div>
-```
-
-**JavaScript code:**
-```javascript
-$('#magazine').turn({gradients: true, acceleration: true});
-```
-
-#### Requirements
-
-jQuery 1.7 or later
-
-#### Browser support
-* Chrome 12, Safari 5, Firefox 10, IE 9
-
-#### License
-Released under a non-commercial BSD license
-
-[Full documentation](https://github.com/blasten/turn.js/wiki/Reference)
-
-* * *
-
-[turnjs.com](http://www.turnjs.com/)
