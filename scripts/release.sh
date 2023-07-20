@@ -42,5 +42,5 @@ then
 
   # push
   git push origin ${TAG_PREFIX}${VERSION}
-  git push origin HEAD:refs/for/master
+  # git push origin HEAD:refs/for/master
 fi

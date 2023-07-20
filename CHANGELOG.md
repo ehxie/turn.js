@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.4 (2023-07-20)
+
+
+### Features
+
+* support side flip ([#1](https://github.com/ehxie/turn.js/issues/1)) ([21400ce](https://github.com/ehxie/turn.js/commit/21400cef0a6e45701e0df267dc4b6bee4a8b84ed))
+
+
+### Bug Fixes
+
+* can not use reserved props as custom props ([42e4eab](https://github.com/ehxie/turn.js/commit/42e4eab45aeb71fbe88cf1d66abfbc7f01c96a22))
+
 ### 0.0.3 (2023-07-20)
 
 

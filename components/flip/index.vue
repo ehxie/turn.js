@@ -1,5 +1,5 @@
 <template>
-	<div id="flip-wrapper" :class="wrapperClass" ref="ref">
+	<div id="flip-wrapper" :class="wrapperClass">
 		<slot></slot>
 	</div>
 </template>
@@ -19,7 +19,6 @@ export default {
 		// 是否禁止滑动翻页
 		disable: Boolean,
 		wrapperClass: String,
-		ref: Object,
 	},
 	mounted() {
 		const props = this.$props
